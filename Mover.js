@@ -1,7 +1,6 @@
 class Mover {
   constructor(x, y, m) {
     this.pos = createVector(x, y);
-    this.mouse = createVector(mouseX, mouseY);
     this.vel = createVector();
     this.acc = createVector();
     this.m = m;
@@ -18,19 +17,13 @@ class Mover {
     this.acc.set(0, 0);
   }
 
-  show1() {
+  show() {
     fill(0);
     circle(this.pos.x, this.pos.y, this.m);
   }
 
-  show2(){
-    fill(0);
-    circle(this.mouse.x, this.mouse.y, this.m);
-  }
+  // show2(){
+  //   fill(0);
+  //   circle(mouseX, mouseY, this.m);
+  // }
 }
-
-// class a {
-//   constructor(){
-//     this.mouse = createVector(mouseX, mouseY);
-//   }
-// }

@@ -8,12 +8,12 @@ function setup() {
 function draw() {
   background(220);
   m.update();
-  m.show1();
+  m.show();
 
   if (mouseIsPressed) {
-    background(220);
-    m.update();
-    m.show2();
-    //make attract to mouse position
+    let mousePos = createVector(mouseX, mouseY);
+    let f = p5.Vector.sub(mousePos, m.pos);
+    f.limit(3);
+    m.applyForce(f);
   }
 }
