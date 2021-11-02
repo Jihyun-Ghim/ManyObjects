@@ -8,9 +8,10 @@ function setup() {
 function draw() {
   background(220);
   m.update();
-  m.show();
-  
+  m.show1();
+
   if (mouseIsPressed) {
+    m.show2();
     //make attract to mouse position
   }
 }
