@@ -11,6 +11,8 @@ function draw() {
   m.show1();
 
   if (mouseIsPressed) {
+    background(220);
+    m.update();
     m.show2();
     //make attract to mouse position
   }
