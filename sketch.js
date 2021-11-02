@@ -15,12 +15,6 @@ function setup() {
 function draw() {
   background(220);
 
-  // for (let i = 0; i < movers.length; i++ ){
-  //   let mover = movers[i];
-  //   mover.update();
-  //   mover.show();
-  // }
-
   for (let mover of movers) {
     mover.update();
     mover.show();
