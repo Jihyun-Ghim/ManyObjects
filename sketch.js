@@ -14,6 +14,17 @@ function setup() {
   }
 }
 
+function keyPressed() {
+  if (keyCode == LEFT_ARROW){
+    let mover = new Mover(random(width), random(height), random(5, 30));
+    movers.puse(mover);
+  }
+  if (keyCode == RIGHT_ARROW){
+    let mover = new Mover(random(width), random(height), random(5, 30));
+    movers.pop();
+  }
+}
+
 function draw() {
   background(250);
   image(canvas,0, 0);
