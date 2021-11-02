@@ -12,7 +12,6 @@ class Mover {
   }
 
   attractTo(aPos){
-    let force= p5.Vector.sub(aPos, this.pos);
     force.limit(3);
     this.applyForce(force);
   }
