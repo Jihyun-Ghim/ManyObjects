@@ -33,11 +33,14 @@ function draw() {
 
   if (mouseIsPressed) {
     let mousePos = createVector(mouseX, mouseY);
+    let center = createVector(width/2, height/2);
+
     m.attractTo(mousePos);
     m2.attractTo(mousePos);
 
     for(let mover of movers){
       mover.attractTo(mousePos);
+      mover.apartFrom(center);
     }
   }
 }

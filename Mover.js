@@ -17,6 +17,12 @@ class Mover {
     this.applyForce(force);
   }
 
+  apartFrom(aPos){
+    let force= p5.Vector.add(aPos, this.pos);
+    force.limit(3);
+    this.applyForce(force);
+  }
+
   update() {
     this.vel.add(this.acc);
     this.pos.add(this.vel);
